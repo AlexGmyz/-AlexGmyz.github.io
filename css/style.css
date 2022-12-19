@@ -81,6 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(0, 0, 0);
   color: #fff;
   position: relative;
+  padding: 0 5px;
   z-index: 3;
   overflow: hidden;
 }
@@ -316,6 +317,9 @@ h1, h2, h3, h4, h5, h6 {
   .fullscreen__title {
     font-size: 40px;
   }
+  .fullscreen__video {
+    position: absolute;
+  }
 }
 @media (max-width: 1000px) {
   .fullscreen__list {
@@ -398,10 +402,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 20px;
   }
   .fullscreen__title {
-    font-size: 40px;
+    font-size: 45px;
     letter-spacing: 10px;
     line-height: 1.5;
     padding: 0 5px 30px 5px;
+    -webkit-animation: textmod 3s 1;
+            animation: textmod 3s 1;
     transition: transform 1s ease 1s;
   }
   .fullscreen__text {
@@ -416,15 +422,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 650px) and (max-width: 450px) {
   .fullscreen__title {
-    font-size: 38px;
+    font-size: 35px;
     letter-spacing: 5px;
-    line-height: 2;
-    padding: 0 0 30px 0;
+    line-height: 1.5;
+    padding: 0 5px 30px 5px;
+    overflow: hidden;
   }
   .fullscreen__text {
     display: none;
   }
 }
+
 .fullscreen__header.active {
   top: 0;
 }
@@ -456,6 +464,18 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translate(2px, 20px);
     letter-spacing: 20px;
+  }
+}
+@-webkit-keyframes textmod {
+  0% {
+    opacity: 0;
+    transform: translate(2px, 20px);
+  }
+}
+@keyframes textmod {
+  0% {
+    opacity: 0;
+    transform: translate(2px, 20px);
   }
 }
 @-webkit-keyframes textZ {
