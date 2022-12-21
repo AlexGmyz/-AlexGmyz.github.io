@@ -5,9 +5,11 @@
 
 .wrapper {
 	font-family: 'EB Garamond', serif;
+	height: 100%;
 }
 .container {
 	max-width: 1200px;
+	height: 100%;
 	margin: 0px auto;
 	background-color: rgb(0, 0, 0);
 	color: #fff;
@@ -15,6 +17,9 @@
 	padding: 0 5px;
 	z-index: 3;
 	overflow: hidden;
+}
+.containerMod {
+	min-height: 100vh;
 }
 
 //
@@ -177,6 +182,10 @@
 		position: relative;
 		
 	}
+	&__none {
+		display: none;
+		
+	}
 
 	&__header {
 		flex: 1 1 auto;
@@ -299,6 +308,12 @@
 			background-color: rgba(0, 0, 0, 0.561);
 			transition: all 1s ease-in 0s;
 			
+		}
+		&__header.head__mod {
+			background-color: rgb(0, 0, 0);
+		}
+		&__none {
+			display: inline-block;
 		}
 
 		&__list {
@@ -441,6 +456,49 @@
 }
 
 
+//////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+.contetn__course {
+	position: relative;
+	z-index: 0;
+	min-height: 100vh;
+	
+}
+.backgroundNew {
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+}
+.titleMod {
+	padding-top: 90px;
+	padding-bottom: 30px;
+	font-size: 30px;
+}
+.head__title {
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	width: 70%;
+	font-style: italic;
+	font-weight: bold;
+	display: inline-block;
+}
+
+
+
+
+
+
 
 
 
@@ -456,7 +514,6 @@
 	&__preview {
 		display: flex;
 		justify-content: center;
-		
 		
 
 	}
@@ -837,6 +894,7 @@
 .course {
 	&__row {
 		display: flex;
+		
 	}
 
 	&__left {
@@ -846,6 +904,14 @@
 		margin: 0px 20px;
 		position: relative;
 		
+	}
+	&__pad {
+		margin-bottom: 60px;
+		
+	}
+	&__left a,
+	&__right a {
+		color: #fff;
 	}
 	&__left,
 	&__right {
