@@ -3,10 +3,10 @@
 <head>
 	<title>Обучение игре на гитаре AlexGeor Prod.</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"; />
 	<meta name="viewport" content="width=device-width">
 	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-	
 </head>
 <body>
 	<div class="wrapper">
@@ -24,16 +24,16 @@
 								<a href="course.html" class="fullscreen__link">Обучение</a>
 							</li>
 							<li>
-								<a href="#course" class="fullscreen__link">Курсы</a>
+								<a href="#"  data-goto=".page__section_1" class="fullscreen__link">Курсы</a>
 							</li>
 							<li>
-								<a href="#tutor" class="fullscreen__link">Tutor</a>
+								<a href="#" data-goto=".page__section_2" class="fullscreen__link">Tutor</a>
 							</li>
 							<!-- <li>
-								<a href="#describe" class="fullscreen__link">Отзывы</a>
+								<a href="#describe" data-goto="" class="fullscreen__link">Отзывы</a>
 							</li> -->
 							<li>
-								<a href="#contacts" class="fullscreen__link">Контакты</a>
+								<a href="#" data-goto=".page__section_3" class="fullscreen__link">Контакты</a>
 							</li>
 						</ul>
 						<div class="fullscreen__contacts">
@@ -91,7 +91,7 @@
 						<div class="content__out">
 							<div class="content__item">
 								<div class="item__image anim-items anim-break">
-									<img class="_anim-showLeft" src="img/first.jpg" alt="">
+									<img class="_anim-showLeft" loading="lazy" src="img//first.webp" alt="">
 								</div>
 								<div class="item__text ">					
 									<div class="item__title">Этот навык с тобой на всю жизнь, а жизнь штука непредсказуемая...
@@ -105,7 +105,7 @@
 							</div>
 							<div class="content__item">
 								<div class="item__imageMod anim-items anim-break">
-									<img class="_anim-showRight" src="img/second.jpg" alt="">
+									<img class="_anim-showRight" loading="lazy" src="img/second.webp" alt="">
 								</div>
 								<div class="item__text">
 									<div class="item__title">Открыть свои новые грани и поразить близих</div>
@@ -116,12 +116,12 @@
 									</div>	
 								</div>
 								<div class="item__image anim-items anim-break item__imageNone">
-									<img class="_anim-showRight" src="img/second.jpg" alt="">
+									<img class="_anim-showRight" loading="lazy" src="img/second.webp" alt="">
 								</div>
 							</div>
 							<div class="content__item">
 								<div class="item__image anim-items anim-break">
-									<img class="_anim-showLeft" src="img/third.jpg" alt="">
+									<img class="_anim-showLeft" loading="lazy" src="img/third.webp" alt="">
 								</div>
 								<div class="item__text">
 									<div class="item__title">Погрузиться целиком. Создать свою первую песню. Покорить сцену. Найти в музыке  самого себя</div>
@@ -145,55 +145,65 @@
 		</section>
 		<section class="start">
 			<div class="background">
-				<div class="container">
+				<div class="container modTabs">
 					<div class="start__body">
 						<div class="start__title title">
 							Как начинается путь?
 						</div>
-						<div class="start__row">
-							<div class="start__item">
-								<div class="start__head">Вариант 1 //</div>
-								<div class="start__text">
-									Кто-то случайно откопал с бабушкиной антресоли старую советскую гитару. Теперь она твой друг ровно на пару недель, пока не отправиться обратно пылиться на уже родной шифанер. 
-									<p>
-									<span class="start__green">Плюсы:</span> Затрачено минимальное количество денежный средств.
-									</p>
-									<p>
-									<span class="start__red">Минусы:</span> Ты все еще не умеешь играть на гитаре. P.s кузнечик не в счет..
-									</p>
+						<div class="tabs">
+							<nav class="tabs__items">
+								<button class="tabs__item start__head" type="button" data-tab="#tab_1"><span>Вариант 1</span>	</button>
+								<button class="tabs__item start__head" type="button" data-tab="#tab_2"><span>Вариант 2</span>	</button>
+								<button class="tabs__item start__head" type="button" data-tab="#tab_3"><span>Вариант 3</span>	</button>	
+							</nav>
+							<div class="tabs__body">
+								<div id="#tab_1" class="tabs__block">
+									<div class="start__row">
+										<div class="start__text">
+											Кто-то случайно откопал с бабушкиной антресоли старую советскую гитару. Теперь она твой друг ровно на пару недель, пока не отправиться обратно пылиться на уже родной шифанер. 
+											<p>
+											<span class="start__green">Плюсы:</span> Затрачено минимальное количество денежный средств.
+											</p>
+											<p>
+											<span class="start__red">Минусы:</span> Ты все еще не умеешь играть на гитаре. P.s кузнечик не в счет..
+											</p>
+										</div>
+										<div class="start__image">
+											<img loading="lazy" src="img/guitar3.webp" alt="">
+										</div>
 									</div>
-								<div class="start__image anim-items anim-break">
-									<img class="_anim-show" src="" alt="">
 								</div>
-							</div>
-							<div class="start__item">
-								<div class="start__head">Вариант 2 //</div>
-								<div class="start__text">
-									Инструмент был куплен в музыкальном магазине самостоятельно или при участии родителей. Вообще ты хотел барабаны, но кто-то резонно сказал, что их нельзя выключить. А вот гитару можно. 
-									<p>
-									<span class="start__green">Плюсы:</span> Хорошо если продавец не реализовал залежавшийся товар. Теперь можно открыть чудесный мир видеоуроков на ютубе.
-									</p>
-									<p>
-									<span class="start__red">Минусы:</span> Пальцы чет болят, и куча информации не по делу.Может это не мое?
-									</p>
+								<div id="#tab_2" class="tabs__block">
+									<div class="start__row">
+										<div class="start__text">
+											Инструмент был куплен в музыкальном магазине самостоятельно или при участии родителей. Вообще ты хотел барабаны, но кто-то резонно сказал, что их нельзя выключить. А вот гитару можно. 
+											<p>
+											<span class="start__green">Плюсы:</span> Хорошо если продавец не реализовал залежавшийся товар. Теперь можно открыть чудесный мир видеоуроков на ютубе.
+											</p>
+											<p>
+											<span class="start__red">Минусы:</span> Пальцы чет болят, и куча информации не по делу.Может это не мое?
+											</p>
+										</div>
+										<div class="start__image">
+											<img loading="lazy" src="img/guitar2.webp" alt="">
+										</div>
 									</div>
-								<div class="start__image anim-items anim-break">
-									<img class="_anim-show" src="" alt="">
 								</div>
-							</div>
-							<div class="start__item">
-								<div class="start__head">Вариант 3 //</div>
-								<div class="start__text">
-									Гитару ты выбрал сердцем и у вас это по любви. На тернистом пути дружеского с ней взаимодействия были и акорды и гаммы и даже любимые песни уже получаются. Но что-то есть ощущения, что процесс двигается как то медленно...
-									<p>
-									<span class="start__green">Плюсы:</span> Отличное начало, ведь в занятии любым делом главное - это самодисциплина, и этот урок уже освоен.
-									</p>
-									<p>
-									<span class="start__red">Минусы:</span> Сколько времени пройдет пока будет достигнута поставленная цель? И останется ли она актуальной на долгое время?
-									</p>
-								</div>
-								<div class="start__image anim-items anim-break">
-									<img class="_anim-show" src="" alt="">
+								<div id="#tab_3" class="tabs__block">
+									<div class="start__row">
+										<div class="start__text">
+											Гитару ты выбрал сердцем и у вас это по любви. На тернистом пути дружеского с ней взаимодействия были и акорды и гаммы и даже любимые песни уже получаются. Но что-то есть ощущения, что процесс двигается как то медленно...
+											<p>
+											<span class="start__green">Плюсы:</span> Отличное начало, ведь в занятии любым делом главное - это самодисциплина, и этот урок уже освоен.
+											</p>
+											<p>
+											<span class="start__red">Минусы:</span> Сколько времени пройдет пока будет достигнута поставленная цель? И останется ли она актуальной на долгое время?
+											</p>
+										</div>
+										<div class="start__image">
+											<img loading="lazy" src="img/guitar1.webp" alt="">
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -211,7 +221,7 @@
 						Ответ ждет тебя в этом коротком видео..
 					</div>
 					<div class="movie__video">
-						<video poster="img/poster.jpg" controls class="movie__media" src="video/Promo Guitar Tutor.mp4" type="video/mp4" ></video>
+						<video poster="img/poster.webp" controls class="movie__media" src="video/Promo Guitar Tutor.mp4" type="video/mp4" ></video>
 					</div>
 				</div>
 			</div>
@@ -225,7 +235,7 @@
 		<section class="about">
 			<div class="background">
 				<div class="container">
-					<div class="about__row">
+					<div class="about__row page__section_2">
 						<div class="about__left">
 							<div class="about__title title">
 								<a name="tutor" >Расскажу немного о себе.</a> 
@@ -239,7 +249,7 @@
 								
 							</div>
 							<div class="about__rightMod anim-items anim-break">
-								<img class="_anim-showRight" src="img/my.jpg" alt="">
+								<img class="_anim-showRight" loading="lazy" src="img/galery/my (1).jpg" alt="">
 							</div>
 							<div class="about__social">
 								<div class="about__icons">
@@ -248,12 +258,12 @@
 									<img src="img/icon/instagram-24.png" alt="">
 								</div>
 								<div class="about__logo">
-									<img src="img/icon/image (2).png" alt="">
+									<img loading="lazy" src="img/icon/image (2).png" alt="">
 								</div>							
 							</div>
 						</div>
-						<div class="about__right anim-items anim-break">
-							<img class="_anim-showRight" src="img/my.jpg" alt="">
+						<div class="about__right anim-items anim-break">	
+							<img class="_anim-showRight" src="img/galery/my.jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -261,7 +271,7 @@
 		</section>
 		<section class="course">
 			<div class="container">
-				<div class="course__body">
+				<div class="course__body page__section_1">
 					<div class="course__title">
 						<a name="course" >Выбери свой курс</a>	
 					</div>
@@ -270,7 +280,7 @@
 							<div class="course__center">
 								<h3 class="course__title course__orange">Курс для начинающего по акустической гитаре</h3>
 								<div class="anim-items anim-break">
-									<img class="_anim-showLeft" src="img/fireGuitar3.jpg"  alt="">
+									<img class="_anim-showLeft" loading="lazy" src="img/fireGuitar3.webp"  alt="">
 									<p class="course__border"> <span class="course__lesson">12 Уроков</span></p>
 								</div>
 							</div>															
@@ -279,7 +289,7 @@
 							<div class="course__center">
 								<h3 class="course__title course__blue">Курс для начинающего по электрогитаре </h3>
 								<div class="anim-items anim-break">
-									<img class="_anim-showRight" src="img/fireGuitar2.jpg" alt="">
+									<img class="_anim-showRight" loading="lazy" src="img/fireGuitar2.webp" alt="">
 									<p class="course__border "><span class="course__lesson blue">12 Уроков</span></p>
 								</div>									
 							</div>
@@ -300,10 +310,42 @@
 				</div>
 			</div>
 		</section>
+		<section class="students">
+			<div class="container">
+				<div class="students__body">
+					<div class="students__title title">
+						Результаты моих учеников
+					</div>
+					<div class="image-slider swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="image">
+									<iframe src="https://www.youtube.com/embed/8dPUkv30o5E" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="image">
+									<iframe src="https://www.youtube.com/embed/UIdPGqMZYzY" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="image">
+									<iframe  src="https://www.youtube.com/embed/N6eDUn9O-AU" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								</div>
+							</div>	
+						</div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-scrollbar"></div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="description">
 			<div class="background">
 				<div class="container">
-					<div class="description__body">
+					<div class="description__body page__section_3">
 						<div class="description__logo"></div>
 						<div class="description__title title">
 							<a name="contacts">Как попасть на первое занятие?</a> 
@@ -338,6 +380,47 @@
 				</div>
 			</div>
 		</section>
+		<section class="faq">
+			<div class="container">
+				<div class="faq__title title">
+					<a name="contacts">Ответы на наиболее частые вопросы</a> 
+				</div>
+				<div class="accordeon">
+					<div class="accordeon-item">
+						<div class="accordeon-item__title">
+							Нужен ли свой инструмент для занятий?
+						</div>
+						<div class="accordeon-item__text">
+							Если вы еще совсем новичок и пока не уверены, что увлечение гитарой останется с вами надолго, первые два занятия можно провести без своего инструмента. Однако, за час работы вместе с преподавателем играть на инструменте вы не научитесь, поскольку навык нужно отрабатывать самостоятельно и желательно ежедневно. Это потребует в дальнейшем от вас приобретения гитары, с выбором которой я вам конечно же помогу. 
+						</div>
+					</div>
+					<div class="accordeon-item">
+						<div class="accordeon-item__title">
+							Где и в каком формате они проходят?
+						</div>
+						<div class="accordeon-item__text">
+							Обучение проходит в формате индивидуальных занятий, длительность составляет один час. Включает в себя проверку домашнего задания, изучение нового теоретического аспекта и  техники, закрепление и формулирование новых заданий на дом.
+						</div>
+					</div>
+					<div class="accordeon-item">
+						<div class="accordeon-item__title">
+							Возможно ли заниматься онлайн?
+						</div>
+						<div class="accordeon-item__text">
+							Да, это возможно. Занятие онлайн практикуется посредством таких ресурсов как Skype, Telegram.
+						</div>
+					</div>
+					<div class="accordeon-item">
+						<div class="accordeon-item__title">
+							Как часто нужно проводить занятия?
+						</div>
+						<div class="accordeon-item__text">
+							Зачастую на первоначальном этапе любые новые знания усваиваются лишь отчасти, именно поэтому в первые месяцы эффективнее заниматься дважды в неделю. При таком подходе легче контролировать прогресс и замечать ошибки, а также давать меньшие по объему задания.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="footer">
 			<div class="background">
 				<div class="container">
@@ -353,6 +436,7 @@
 			</div>
 		</section>
 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

@@ -152,20 +152,6 @@ function changeToBcg() {
 
 }
 
-// window.addEventListener('scroll', stopMovie);
-
-// function stopMovie() {
-// 	//Добавляем и забираем атрибут 
-// 	const searchAtr = document.querySelector('.fullscreen__video');
-// 	const stopMovie = 1000;
-// 	const scNormal = window.scrollY
-// 	if(scNormal >= stopMovie) {
-// 		searchAtr.removeAttribute('autoplay','')	
-// 	}else {
-// 		searchAtr.setAttribute('autoplay','')	
-// 	}
-// }
-
 
 //Burger
 
@@ -185,6 +171,7 @@ header__burger.addEventListener('click', function(){
 })
 
 header__list.onclick = function () {
+	 document.body.classList.toggle("lock");
     header__list.classList.remove('active');
     back.classList.toggle('lock');
 }
@@ -202,3 +189,99 @@ description__btn.addEventListener('click', () => {
 	description__btn.after(newElem);
 
 })
+
+//Плавный скролл 
+
+const menuLinks = document.querySelectorAll('.fullscreen__link[data-goto]');
+if(menuLinks.length>0) {
+   menuLinks.forEach(element => {
+      element.addEventListener("click", function(e) {
+         const menuLink = e.target;
+         if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+            const gotoBlock = document.querySelector(menuLink.dataset.goto);
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
+            if(header__burger.classList.contains("active")) {
+               document.body.classList.remove("lock");
+               header__menu.classList.remove("active");
+               header__burger.classList.remove("active");
+					fullscreen__text.classList.toggle('activeMod');
+					fullscreen__title.classList.toggle('active');
+            } 
+            
+            window.scrollTo({
+               top:gotoBlockValue,
+               behavior:"smooth"
+            });
+            e.preventDefault();
+         }
+      })  
+   });
+}
+
+//Tab's
+
+const tabsBtn = document.querySelectorAll('.tabs__item');
+const tabsBlock = document.querySelectorAll('.tabs__block');
+
+tabsBtn.forEach(function(item) {
+   item.addEventListener("click", function(){
+      let currentBtn = item;
+      let tabId = currentBtn.getAttribute("data-tab");
+      let currentTab = document.getElementById(tabId);
+
+      if(! currentBtn.classList.contains('active')) {
+         tabsBtn.forEach(function(item) {
+            item.classList.remove("active");
+         }) 
+         tabsBlock.forEach(function(item) {
+            item.classList.remove("active");
+         }) 
+   
+   
+         currentBtn.classList.add("active");
+         currentTab.classList.add("active");
+      }
+   }) 
+});
+
+document.querySelector('.tabs__item').click();
+
+
+//Spoiler
+
+document.querySelectorAll('.accordeon-item__title').forEach((item) =>
+   item.addEventListener('click', () => {
+      const parent = item.parentNode;
+
+      if(parent.classList.contains('active')) {
+         parent.classList.remove('active')
+      }else {
+         document.querySelectorAll('.accordeon-item').forEach((child) =>
+            child.classList.remove('active')
+         )
+
+         parent.classList.add('active')
+      }
+
+      
+   })
+) 
+
+//swiper
+new Swiper('.image-slider', {
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+   },
+   pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+      dynamicBullets:true,
+   },
+   grabCursor:true,
+   mousewheel: {
+      sensitivity: 1,
+      eventsTarget: ".image-slider"
+   },
+});
+
