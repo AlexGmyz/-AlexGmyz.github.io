@@ -1238,6 +1238,10 @@ ol {
     width: 425px;
     height: 240px;
   }
+  .image-slider {
+    overflow: hidden;
+    padding-top: 10px;
+  }
 }
 @media (max-width: 419px) {
   .image iframe {
