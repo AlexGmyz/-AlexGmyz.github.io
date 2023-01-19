@@ -1238,9 +1238,6 @@ ol {
     width: 425px;
     height: 240px;
   }
-  .students {
-    height: 45%;
-  }
 }
 @media (max-width: 419px) {
   .image iframe {
@@ -1258,7 +1255,6 @@ ol {
 .image-slider .swiper-button-next::after {
   color: white;
   font-size: 60px;
-  display: none;
 }
 
 .image-slider .swiper-pagination-bullet {
