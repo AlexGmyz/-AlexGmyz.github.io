@@ -112,6 +112,11 @@ body.lock {
 		text-align: center;
 
 	}
+	&__titleMod {
+		font-size: 35px;
+		letter-spacing: 5px;
+		animation: tex 3s 1 ;
+	}
 	&__text {
 		position: relative;
 		z-index: 2;
@@ -120,6 +125,12 @@ body.lock {
 		opacity: 1;
 		transition: all 1s ease 2s;
 	}
+	&__textMod {
+		animation-delay: 0.5s;
+		animation: texZ 2s ;
+		color: #fff;
+		
+	}
 	&__btn {
 		position: relative;
 		z-index: 2;
@@ -127,6 +138,9 @@ body.lock {
 		border: 1px solid #b04b1581;
 		padding: 10px;
 		transition: all 0.7s ease 0s;
+	}
+	&__btn button a {
+		color: #fff;
 	}
 	&__btn:hover {
 		border: 1px solid #c35215;
@@ -402,14 +416,19 @@ body.lock {
 				font-size: 35px;
 				letter-spacing: 5px;
 				line-height: 1.5;
-				padding: 0 5px 30px 5px;
-				
+				padding: 0 5px 30px 5px;			
 				overflow: hidden;
-				
 		
 			}
 			&__text {
 				display: none;
+			}
+			&__textMod {
+				display: block;
+			}
+			&__titleMod {
+				font-size: 24px;
+				letter-spacing: 4px;
 			}
 			
 		}
@@ -440,6 +459,19 @@ body.lock {
 		opacity: 0;
 		transform: translate(2px,20px);
 		letter-spacing: 20px;
+	}
+}
+@keyframes tex {
+	0% {
+		opacity: 0;
+		transform: translate(2px,20px);
+		letter-spacing: 10px;
+	}
+}
+@keyframes texZ {
+	0% {
+		opacity: 0;
+		transform: translate(2px,10px);
 	}
 }
 
@@ -508,6 +540,10 @@ body.lock {
 		
 
 	}
+	&__swipe {
+		display: none;
+		height: 50%;
+	}
 	&__block {
 		text-align: center;
 		font-style: italic;
@@ -542,6 +578,22 @@ body.lock {
 		display: flex;
 		
 	}
+	@media (max-width:650px) {
+		&__out {
+			display: none;
+		}
+		&__swipe {
+			display: block;
+		}
+		
+		
+	}
+}
+
+
+.prevMod,
+.prevNext {
+	padding-top: 15%;
 }
 
 ._anim-show.active,
@@ -1607,7 +1659,16 @@ ol {
 		background: linear-gradient(to right, #9f240ea5, #3278b1a3);
 		
 	}
-
-	
 }
 
+@media (max-width:400px) {
+	.image-slider .swiper-button-prev::after,
+	.image-slider .swiper-button-next::after {
+		font-size: 40px;
+	}
+	
+	.prevMod,
+	.prevNext {
+		padding-top: 20%;
+	}
+}

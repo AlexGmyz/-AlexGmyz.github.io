@@ -184,6 +184,12 @@ body.lock {
           animation: text 3s 1;
   text-align: center;
 }
+.fullscreen__titleMod {
+  font-size: 35px;
+  letter-spacing: 5px;
+  -webkit-animation: tex 3s 1;
+          animation: tex 3s 1;
+}
 .fullscreen__text {
   position: relative;
   z-index: 2;
@@ -192,6 +198,13 @@ body.lock {
   opacity: 1;
   transition: all 1s ease 2s;
 }
+.fullscreen__textMod {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation: texZ 2s;
+          animation: texZ 2s;
+  color: #fff;
+}
 .fullscreen__btn {
   position: relative;
   z-index: 2;
@@ -199,6 +212,9 @@ body.lock {
   border: 1px solid rgba(176, 75, 21, 0.5058823529);
   padding: 10px;
   transition: all 0.7s ease 0s;
+}
+.fullscreen__btn button a {
+  color: #fff;
 }
 .fullscreen__btn:hover {
   border: 1px solid #c35215;
@@ -450,6 +466,13 @@ body.lock {
   .fullscreen__text {
     display: none;
   }
+  .fullscreen__textMod {
+    display: block;
+  }
+  .fullscreen__titleMod {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
 }
 
 .fullscreen__header.active {
@@ -483,6 +506,32 @@ body.lock {
     opacity: 0;
     transform: translate(2px, 20px);
     letter-spacing: 20px;
+  }
+}
+@-webkit-keyframes tex {
+  0% {
+    opacity: 0;
+    transform: translate(2px, 20px);
+    letter-spacing: 10px;
+  }
+}
+@keyframes tex {
+  0% {
+    opacity: 0;
+    transform: translate(2px, 20px);
+    letter-spacing: 10px;
+  }
+}
+@-webkit-keyframes texZ {
+  0% {
+    opacity: 0;
+    transform: translate(2px, 10px);
+  }
+}
+@keyframes texZ {
+  0% {
+    opacity: 0;
+    transform: translate(2px, 10px);
   }
 }
 @-webkit-keyframes textmod {
@@ -549,6 +598,10 @@ body.lock {
   display: flex;
   justify-content: center;
 }
+.content__swipe {
+  display: none;
+  height: 50%;
+}
 .content__block {
   text-align: center;
   font-style: italic;
@@ -585,6 +638,19 @@ body.lock {
 }
 .content__item {
   display: flex;
+}
+@media (max-width: 650px) {
+  .content__out {
+    display: none;
+  }
+  .content__swipe {
+    display: block;
+  }
+}
+
+.prevMod,
+.prevNext {
+  padding-top: 15%;
 }
 
 ._anim-show.active,
@@ -1563,4 +1629,15 @@ ol {
 .acoustic__down {
   flex: 0 1 80px;
   background: linear-gradient(to right, rgba(159, 36, 14, 0.6470588235), rgba(50, 120, 177, 0.6392156863));
+}
+
+@media (max-width: 400px) {
+  .image-slider .swiper-button-prev::after,
+.image-slider .swiper-button-next::after {
+    font-size: 40px;
+  }
+  .prevMod,
+.prevNext {
+    padding-top: 20%;
+  }
 }

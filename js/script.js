@@ -176,19 +176,6 @@ header__list.onclick = function () {
     back.classList.toggle('lock');
 }
 
-//Wrong Form
-
-let description__btn = document.querySelector('.description__btn');
-
-let newElem = document.createElement('div');
-
-let textTwo = "Service temporarily unavailable";
-
-description__btn.addEventListener('click', () => {
-	newElem.innerHTML = textTwo;
-	description__btn.after(newElem);
-
-})
 
 //Плавный скролл 
 
