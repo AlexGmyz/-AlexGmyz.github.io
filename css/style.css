@@ -1630,6 +1630,12 @@ ol {
   flex: 0 1 80px;
   background: linear-gradient(to right, rgba(159, 36, 14, 0.6470588235), rgba(50, 120, 177, 0.6392156863));
 }
+.acoustic__text {
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
 
 @media (max-width: 400px) {
   .image-slider .swiper-button-prev::after,
