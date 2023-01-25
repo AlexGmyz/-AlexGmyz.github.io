@@ -187,7 +187,14 @@ body.lock {
 		z-index: 1;
 		transition: background-color 1.5s ease 0s;
 	}
-
+	&__none {
+		font-size: 35px;
+		padding: 30px 0;
+		font-weight: bold;
+	}
+	&__none a {
+		color: #2E8B57;
+	}
 	&__logo {
 		flex: 0 1 25%;
 		padding: 4px 0;
@@ -1649,12 +1656,17 @@ ol {
 		font-size: 34px;
 		font-weight: bold;
 		text-transform: uppercase;
+		cursor:default;
 	}
 
 	&__down {
 		flex: 0 1 80px;
 		background: linear-gradient(to right, #9f240ea5, #3278b1a3);
+		cursor: pointer;
 		
+	}
+	&__down a {
+		color: #fff;
 	}
 	&__text  {
 		font-size: 18px;
@@ -1662,6 +1674,93 @@ ol {
 		letter-spacing: 1.2px;
 		text-align: center;
 	}
+}
+.lesson {
+	position:relative;
+	z-index: 1;
+	margin-top: 50px;
+	&__image {
+		text-align: center;
+	}
+	img {
+		max-width: 70%;
+		padding: 15px;
+	}
+	&__imageMod img {
+		max-width: 50%;
+	}
+	&__chapter {
+		padding: 30px 10%;
+		font-size: 20px;
+		letter-spacing: 1.1px;
+		line-height: 1.3;
+		text-align: justify;
+		text-indent: 5%;
+	}
+	&__chapter p {
+		padding: 5px 0;
+	}
+	&__title {
+		padding: 30px 0;
+		font-size: 35px;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	&__footer {
+		padding: 0px 15% 20px 15%;
+		font-size: 22px;
+		letter-spacing: 1.1px;
+		line-height: 1.3;
+		font-style: italic;
+	}
+	&__footer p {
+		padding: 5px 0;
+	}
+	&__chapter::before {
+		content: "";
+		position: absolute;
+		left: 10%;
+		width: 80%;
+		height: 2px;
+		background-color: rgba(19 163 177);
+	}
+	li {
+		padding: 5px 0;
+	}
+	@media (max-width:600px) {
+		&__title {
+			font-size: 26px;
+			line-height: 1.1;
+		}
+		&__chapter {
+			padding: 30px 5%;
+		}
+		img {
+			max-width: 90%;
+		}
+		&__footer {
+			padding: 0px 7% 20px 7%;
+		}
+	}
+}
+.textMody {
+	font-size: 30px;
+	font-weight: bold;
+}
+.red {
+	color: red;
+}
+
+.accordeon-item::after,
+.accordeon-item::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background-color: rgba(19 163 177);
 }
 
 @media (max-width:400px) {
