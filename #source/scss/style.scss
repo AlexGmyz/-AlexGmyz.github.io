@@ -1774,3 +1774,52 @@ ol {
 		padding-top: 20%;
 	}
 }
+.codeForm {
+	position: relative;
+	z-index: 4;
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+.codeForm input {
+	background-color: #000;
+	border: 1px solid #fff;
+	height: 40px;
+	width: 150px;
+	margin: 0 10px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	animation: code 8s ease 0s;
+	transition: all 1s ease 0s;
+}
+
+.codeForm input::placeholder {
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+}
+.codeBtn {
+	cursor: pointer;
+
+}
+.codeBtn:hover {
+	box-shadow: 1px 2px 10px rgb(161, 154, 154);
+	transform: translate(2px,2px);
+}
+@media (max-width:350px) {
+	.codeForm input {
+		display: inline-block;
+		text-align: center;
+		margin: 10px 0;
+		width: 100%;
+	}
+}
+
+@keyframes code {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

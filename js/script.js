@@ -1,11 +1,5 @@
 
 
-
-const text = document.querySelector('.content__preview');
-
-const t = [text.innerHTML];
-
-
 function typeText() {
 	let line = 0;
 	let count = 0;
@@ -161,20 +155,24 @@ let back = document.querySelector('body');
 let header__list = document.querySelector('.fullscreen__list');
 let fullscreen__title = document.querySelector('.fullscreen__title');
 let fullscreen__text = document.querySelector('.fullscreen__text');
+if(header__burger){
+	header__burger.addEventListener('click', function(){
+		header__burger.classList.toggle('active');
+		header__menu.classList.toggle('active');
+		fullscreen__text.classList.toggle('activeMod');
+		fullscreen__title.classList.toggle('active');
+		back.classList.toggle('lock');
+  })
+ }
 
-header__burger.addEventListener('click', function(){
-    header__burger.classList.toggle('active');
-    header__menu.classList.toggle('active');
-	 fullscreen__text.classList.toggle('activeMod');
-	 fullscreen__title.classList.toggle('active');
-    back.classList.toggle('lock');
-})
-
-header__list.onclick = function () {
-	 document.body.classList.toggle("lock");
-    header__list.classList.remove('active');
-    back.classList.toggle('lock');
+if(header__list) {
+	header__list.onclick = function () {
+		document.body.classList.toggle("lock");
+		header__list.classList.remove('active');
+		back.classList.toggle('lock');
+  }
 }
+
 
 
 //Плавный скролл 
@@ -271,4 +269,7 @@ new Swiper('.image-slider', {
       eventsTarget: ".image-slider"
    },
 });
+
+//Code word
+
 
