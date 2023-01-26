@@ -1613,11 +1613,18 @@ ol {
   min-height: 220px;
   box-shadow: 5px -5px 25px rgba(80, 75, 75, 0.711);
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
   height: 100%;
   overflow: hidden;
   transition: all 1s ease-in-out 0s;
+}
+.acoustic__item a {
+  color: aliceblue;
+}
+.acoustic__cont {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
 }
 .acoustic__item:hover {
   transform: translate(3px, 3px);
@@ -1633,12 +1640,10 @@ ol {
   font-size: 34px;
   font-weight: bold;
   text-transform: uppercase;
-  cursor: default;
 }
 .acoustic__down {
   flex: 0 1 80px;
   background: linear-gradient(to right, rgba(159, 36, 14, 0.6470588235), rgba(50, 120, 177, 0.6392156863));
-  cursor: pointer;
 }
 .acoustic__down a {
   color: #fff;

@@ -1634,12 +1634,19 @@ ol {
 		// border: 2px solid rgb(162 67 23);
 		box-shadow: 5px -5px 25px rgba(80, 75, 75, 0.711);
 		border-radius: 10px;
-		display: flex;
-		flex-direction: column;
 		height: 100%;
 		overflow: hidden;
 		transition: all 1s ease-in-out 0s;
 		
+	}
+	&__item a {
+		color: aliceblue;
+	}
+	&__cont {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		cursor: pointer;
 	}
 	&__item:hover {
 		transform: translate(3px, 3px);
@@ -1656,13 +1663,11 @@ ol {
 		font-size: 34px;
 		font-weight: bold;
 		text-transform: uppercase;
-		cursor:default;
 	}
 
 	&__down {
 		flex: 0 1 80px;
 		background: linear-gradient(to right, #9f240ea5, #3278b1a3);
-		cursor: pointer;
 		
 	}
 	&__down a {
